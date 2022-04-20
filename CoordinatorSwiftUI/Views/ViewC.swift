@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ViewC<TViewModel: ViewModelProtocolC & FlowStateProtocolC>: View {
+struct ViewC<TViewModel: ViewModelProtocolC & FlowStateProtocol>: View {
     @StateObject var viewModel: TViewModel
     var body: some View {
         Text(viewModel.title)

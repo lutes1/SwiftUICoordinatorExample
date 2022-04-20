@@ -7,20 +7,21 @@
 
 import SwiftUI
 
-struct ViewA<TViewModel: ViewModelCombinedProtocol>: View {
+struct MainView<TViewModel: MainViewModelProtocol & MainFlowStateProtocol>: View {
     @StateObject var viewModel: TViewModel
+    
     var body: some View {
-        FlowCoordinatorA(state: viewModel) {
+        MainFlowCoordinator(model: viewModel) {
             VStack {
-                Button("Go to view B") {
-                    viewModel.navigateToViewB()
+                Button("Account view") {
+                    viewModel.navigateToAccount()
                 }
                 
                 Spacer()
                     .frame(height: 20)
                 
-                Button("Go to view C") {
-                    viewModel.navigateToViewC()
+                Button("Explore view") {
+                    viewModel.navigateToExplore()
                 }
             }
         }
@@ -29,7 +30,7 @@ struct ViewA<TViewModel: ViewModelCombinedProtocol>: View {
 
 struct ViewA_Previews: PreviewProvider {
     static var previews: some View {
-        ViewA(viewModel: ViewModelA())
+        MainView(viewModel: MainViewModel())
     }
 }
 

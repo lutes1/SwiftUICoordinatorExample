@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ViewB<TViewModel: ViewModelProtocolB>: View {
+struct ExploreView<TViewModel: ExploreViewModelProtocol & ExploreFlowStateProtocol>: View {
     @StateObject var viewModel: TViewModel
     
     var body: some View {
-        Text(viewModel.title)
+        ExploreFlowCoordinator(model: viewModel) { EmptyView() }
     }
 }
 
 struct ViewB_Previews: PreviewProvider {
     static var previews: some View {
-        ViewB(viewModel: ViewModelB())
+        ExploreView(viewModel: ExploreViewModel())
     }
 }

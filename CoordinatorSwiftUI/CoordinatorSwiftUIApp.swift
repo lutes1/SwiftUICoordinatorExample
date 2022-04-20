@@ -11,7 +11,7 @@ import SwiftUI
 struct CoordinatorSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ViewA(viewModel: ViewModelA())
+            MainView(viewModel: MainViewModel())
         }
     }
 }

@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct ViewD: View {
+struct AccountView<TViewModel: AccountViewModelProtocol>: View {
+    @ObservedObject var viewModel: TViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(viewModel.title)
     }
 }
 
 struct ViewD_Previews: PreviewProvider {
     static var previews: some View {
-        ViewD()
+        AccountView(viewModel: AccountViewModel())
     }
 }
