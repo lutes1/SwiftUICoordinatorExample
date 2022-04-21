@@ -32,6 +32,8 @@
 		2BB144962811E53A0080B16D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB144952811E53A0080B16D /* SettingsViewModel.swift */; };
 		2BB144982811E5B80080B16D /* SettingsFlowStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB144972811E5B80080B16D /* SettingsFlowStateProtocol.swift */; };
 		2BB1449A2811E8FE0080B16D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB144992811E8FE0080B16D /* ViewModel.swift */; };
+		2BB1449F2811F1B00080B16D /* ModalFlowStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1449E2811F1B00080B16D /* ModalFlowStateProtocol.swift */; };
+		2BB144A12811F1B70080B16D /* TabFlowStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB144A02811F1B70080B16D /* TabFlowStateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		2BB144952811E53A0080B16D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		2BB144972811E5B80080B16D /* SettingsFlowStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowStateProtocol.swift; sourceTree = "<group>"; };
 		2BB144992811E8FE0080B16D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2BB1449E2811F1B00080B16D /* ModalFlowStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFlowStateProtocol.swift; sourceTree = "<group>"; };
+		2BB144A02811F1B70080B16D /* TabFlowStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFlowStateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				2B5B2F00280DBA6800F186EA /* NavigationFlowStateProtocol.swift */,
+				2BB1449E2811F1B00080B16D /* ModalFlowStateProtocol.swift */,
+				2BB144A02811F1B70080B16D /* TabFlowStateProtocol.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -298,11 +304,13 @@
 				2B0E55B62810654C0083686D /* DetailPageView.swift in Sources */,
 				2B5B2EFF280DB99B00F186EA /* MainFlowCoordinator.swift in Sources */,
 				2B5B2F01280DBA6800F186EA /* NavigationFlowStateProtocol.swift in Sources */,
+				2BB144A12811F1B70080B16D /* TabFlowStateProtocol.swift in Sources */,
 				2BB1448D2811A43F0080B16D /* ViewModelProtocol.swift in Sources */,
 				2B5B2ED5280DAB2200F186EA /* CoordinatorSwiftUIApp.swift in Sources */,
 				2B5B2EF1280DB29800F186EA /* MainFlowStateProtocol.swift in Sources */,
 				2B0E55B8281066FA0083686D /* SettingsView.swift in Sources */,
 				2BB144962811E53A0080B16D /* SettingsViewModel.swift in Sources */,
+				2BB1449F2811F1B00080B16D /* ModalFlowStateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

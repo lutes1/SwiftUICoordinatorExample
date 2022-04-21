@@ -13,15 +13,5 @@ protocol NavigationFlowStateProtocol : ObservableObject {
     var linkType: TNavLink? { get set }
 }
 
-protocol TabFlowStateProtocol : ObservableObject {
-    associatedtype TTabLink where TTabLink: LinkProtocol
-    var activeTab: TTabLink { get set }
-}
-
-protocol ModalFlowStateProtocol : ObservableObject {
-    associatedtype TModalItem
-    var modalItem: TModalItem? { get set }
-}
-
 protocol LinkProtocol: Hashable, Identifiable {
 }
