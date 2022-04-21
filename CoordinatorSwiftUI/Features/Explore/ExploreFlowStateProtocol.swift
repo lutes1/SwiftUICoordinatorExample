@@ -7,9 +7,12 @@
 
 import Foundation
 
-protocol ExploreFlowStateProtocol: TabFlowStateProtocol where T == ExploreNavigationLink { }
+protocol ExploreFlowStateProtocol: NavigationFlowStateProtocol, TabFlowStateProtocol where
+    TTabLink == ExploreTabLink,
+    TNavLink == ExploreNavigationLink
+{ }
 
-enum ExploreNavigationLink: NavigationLinkProtocol {
+enum ExploreTabLink: LinkProtocol {
     case recent
     case mostLiked
     case profile
@@ -24,4 +27,9 @@ enum ExploreNavigationLink: NavigationLinkProtocol {
             return "profile"
         }
     }
+}
+
+enum ExploreNavigationLink: LinkProtocol {
+    case settings
+    var id: String { "settings" }
 }

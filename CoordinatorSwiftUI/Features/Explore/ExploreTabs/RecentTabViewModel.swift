@@ -9,13 +9,13 @@ import SwiftUI
 
 protocol RecentTabViewModelProtocol : ViewModelProtocol {
     func showPersonalTab()
-    init(exploreLink: Binding<ExploreNavigationLink>)
+    init(exploreLink: Binding<ExploreTabLink>)
 }
 
 class RecentTabViewModel : RecentTabViewModelProtocol {
-    private var exploreLink: Binding<ExploreNavigationLink>
+    private var exploreLink: Binding<ExploreTabLink>
     
-    required init(exploreLink: Binding<ExploreNavigationLink>) {
+    required init(exploreLink: Binding<ExploreTabLink>) {
         self.exploreLink = exploreLink
     }
     

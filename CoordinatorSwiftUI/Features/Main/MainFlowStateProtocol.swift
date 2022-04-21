@@ -7,11 +7,9 @@
 
 import Foundation
 
-protocol MainFlowStateProtocol: NavigationFlowStateProtocol where T == MainNavigationLink {
-    
-}
+protocol MainFlowStateProtocol: NavigationFlowStateProtocol where TNavLink == MainNavigationLink { }
 
-enum MainNavigationLink: NavigationLinkProtocol {
+enum MainNavigationLink: LinkProtocol {
     case explore
     case account
     

@@ -9,13 +9,15 @@ import SwiftUI
 
 struct MostLikedView: View {
     var body: some View {
-        Text("Most liked")
-            .tabItem {
-                Image(systemName: "hand.thumbsup")
-                Text("Liked")
-            }
-            .tag(ExploreNavigationLink.mostLiked)
-        
+        ZStack {
+            Color.blue.opacity(0.3)
+            Text("Most liked")
+        }
+        .tabItem {
+            Image(systemName: "hand.thumbsup")
+            Text("Liked")
+        }
+        .tag(ExploreTabLink.mostLiked)
     }
 }
 

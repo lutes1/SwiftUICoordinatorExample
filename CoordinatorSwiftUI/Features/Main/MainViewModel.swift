@@ -15,6 +15,7 @@ protocol MainViewModelProtocol: ViewModelProtocol {
 class MainViewModel: MainFlowStateProtocol, MainViewModelProtocol {
     @Published var linkType: MainNavigationLink?
     @Published var title = "Welcome to the main view!"
+    var navigateBack: (() -> Void)?
     
     func navigateToAccount() {
         linkType = .account

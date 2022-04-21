@@ -10,14 +10,15 @@ import SwiftUI
 struct MostRecentView<TViewModel: RecentTabViewModelProtocol> : View {
     @ObservedObject var viewModel: TViewModel
     var body: some View {
-        Button("Go to profile", action: {
-            viewModel.showPersonalTab()
-        })
-            .tabItem {
-                Image(systemName: "clock.arrow.circlepath")
-                Text("Recent")
-            }
-            .tag(ExploreNavigationLink.recent)
+        ZStack {
+            Color.green.opacity(0.3)
+            Button("Go to profile", action: { viewModel.showPersonalTab()})
+        }
+        .tabItem {
+            Image(systemName: "clock.arrow.circlepath")
+            Text("Recent")
+        }
+        .tag(ExploreTabLink.recent)
     }
 }
 

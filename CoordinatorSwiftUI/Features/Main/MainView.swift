@@ -11,7 +11,7 @@ struct MainView<TViewModel: MainViewModelProtocol & MainFlowStateProtocol>: View
     @StateObject var viewModel: TViewModel
     
     var body: some View {
-        MainFlowCoordinator(model: viewModel) {
+        MainFlowCoordinator(coordinatorState: viewModel) {
             VStack {
                 Button("Account view") {
                     viewModel.navigateToAccount()

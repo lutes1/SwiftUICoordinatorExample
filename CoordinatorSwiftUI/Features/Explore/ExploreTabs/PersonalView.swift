@@ -9,12 +9,15 @@ import SwiftUI
 
 struct PersonalView: View {
     var body: some View {
-        Text("Personal")
-            .tabItem {
-                Image(systemName: "person")
-                Text("Personal")
-            }
-            .tag(ExploreNavigationLink.profile)
+        ZStack {
+            Color.yellow.opacity(0.3)
+            Text("Personal")
+        }
+        .tabItem {
+            Image(systemName: "person")
+            Text("Personal")
+        }
+        .tag(ExploreTabLink.profile)
     }
 }
 

@@ -7,17 +7,23 @@
 
 import SwiftUI
 
-struct MainFlowCoordinator<Content: View, TState: MainFlowStateProtocol> : View
-{
-    @ObservedObject var model: TState
+protocol CoordinatorProtocol {
+    associatedtype Content: View
+    associatedtype TState
+    var content: () -> Content { get }
+    var coordinatorState: TState { get }
+}
+
+struct MainFlowCoordinator<Content: View, TState: MainFlowStateProtocol> : CoordinatorProtocol, View {
+    @ObservedObject var coordinatorState: TState
     @ViewBuilder var content: () -> Content
     
     var body: some View {
         NavigationView {
             ZStack {
                 content()
-                NavigationLink(tag: .explore, selection: $model.linkType, destination: navigateToExplore) { EmptyView() }
-                NavigationLink(tag: .account, selection: $model.linkType, destination: navigateToAccount) { EmptyView() }
+                NavigationLink(tag: .explore, selection: $coordinatorState.linkType, destination: navigateToExplore) { EmptyView() }
+                NavigationLink(tag: .account, selection: $coordinatorState.linkType, destination: navigateToAccount) { EmptyView() }
             }
         }
     }

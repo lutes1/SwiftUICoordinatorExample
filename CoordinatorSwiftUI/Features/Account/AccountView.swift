@@ -10,7 +10,7 @@ import SwiftUI
 struct AccountView<TViewModel: AccountViewModelProtocol>: View {
     @ObservedObject var viewModel: TViewModel
     var body: some View {
-        Text(viewModel.title)
+        Text("viewModel")
     }
 }
 

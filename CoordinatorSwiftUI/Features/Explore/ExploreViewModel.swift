@@ -11,10 +11,14 @@ protocol ExploreViewModelProtocol : ViewModelProtocol {
     func navigateToMostRecent()
     func navigateToMostLiked()
     func navigateToPersonal()
+    func navigateToSettingsPage()
 }
 
 class ExploreViewModel: ExploreViewModelProtocol, ExploreFlowStateProtocol {
-    @Published var activeTab: ExploreNavigationLink = .profile
+
+    @Published var activeTab: ExploreTabLink = .profile
+    @Published var linkType: ExploreNavigationLink?
+    
     var title: String = "View explore view!"
     
     func navigateToMostRecent() {
@@ -27,5 +31,9 @@ class ExploreViewModel: ExploreViewModelProtocol, ExploreFlowStateProtocol {
     
     func navigateToPersonal() {
         activeTab = .profile
+    }
+    
+    func navigateToSettingsPage() {
+        linkType = .settings
     }
 }
